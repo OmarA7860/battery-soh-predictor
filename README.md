@@ -1,107 +1,82 @@
-🔋 Battery Health Prediction & AI Assistant
+# 🔋 Battery Health Prediction & AI Assistant
 
-An intelligent battery analytics system that predicts lithium-ion battery health using Machine Learning and provides an AI-powered assistant for battery-related insights using the Gemini API.
+An intelligent machine learning system that predicts lithium-ion battery **State of Health (SOH)** using real operational battery data and provides an AI-powered assistant for battery-related insights using the **Google Gemini API**.
 
-Built with Python, Scikit-Learn, and Google Gemini AI.
+---
 
-🚀 Project Highlights
-Developed a Machine Learning pipeline for predicting battery State of Health (SOH)
-Implemented Linear Regression using Scikit-Learn
-Compared multiple preprocessing strategies for performance evaluation
-Generated automated metrics, visualizations, and CSV reports
-Integrated Google Gemini API for an AI-powered battery assistant
-Structured outputs for analytics and future scalability
-🧠 Problem Statement
+## 📌 Overview
 
-Battery degradation directly impacts:
+Battery degradation is a major challenge in:
 
-Electric vehicles
-Energy storage systems
-Portable electronics
-Sustainability and recycling initiatives
+- Electric Vehicles (EVs)
+- Renewable Energy Storage
+- Portable Electronics
+- Sustainability & Recycling Systems
 
-This project explores how Machine Learning can estimate battery health using voltage measurements and operational data.
+This project applies **Machine Learning** to analyze battery voltage measurements and operational data in order to predict battery health and classify batteries as healthy or unhealthy.
 
-The system predicts the State of Health (SOH) of lithium-ion batteries and classifies them based on configurable health thresholds.
+In addition, the system integrates a conversational AI assistant powered by **Google Gemini AI** for battery-related recommendations and educational support.
 
-⚙️ Tech Stack
-Technology	Purpose
-Python	Core development
-Pandas	Data analysis
-NumPy	Numerical operations
-Scikit-Learn	Machine Learning
-Matplotlib	Data visualization
-Gemini API	AI chatbot integration
-VS Code	Development environment
-🏗️ System Architecture
-Battery Dataset
-       ↓
-Data Filtering & Preprocessing
-       ↓
-Feature Extraction (Voltage Cells U1-U21)
-       ↓
-Linear Regression Model
-       ↓
-SOH Prediction
-       ↓
-Battery Classification
-       ↓
-Visualization & CSV Reports
-       ↓
-Gemini AI Chatbot Assistant
-📊 Machine Learning Pipeline
-Data Processing
+---
 
-The system:
+## 🚀 Features
 
-Loads battery data from Excel
-Filters operating conditions
-Extracts voltage cell measurements
-Splits data into training and testing sets
-Model
+✅ Battery SOH Prediction using Linear Regression  
+✅ Automated preprocessing and data filtering  
+✅ Multiple preprocessing strategy comparison  
+✅ Battery health classification system  
+✅ CSV report generation and visualization outputs  
+✅ AI-powered chatbot using Google Gemini API  
+✅ Configurable health threshold system  
+✅ Modular and scalable Python architecture
 
-The project uses:
+---
 
-Linear Regression
+## 🧠 Machine Learning Pipeline
 
-Implemented using:
+The project workflow includes:
 
-sklearn.linear_model.LinearRegression
+1. Data Loading from Excel dataset
+2. Data Cleaning & Filtering
+3. Feature Extraction
+4. Train/Test Split
+5. Linear Regression Model Training
+6. SOH Prediction
+7. Battery Classification
+8. Metrics Evaluation
+9. Visualization & Reporting
 
-The model predicts:
+---
 
-Battery State of Health (SOH)
+## 📊 Model Performance
 
-Using:
+The trained Linear Regression model achieved:
 
-Voltage measurements from 21 battery cells
-Evaluation Metrics
+| Metric | Value |
+|---|---|
+| R² Score | 0.6561 |
+| Mean Squared Error (MSE) | 0.001498 |
+| Mean Absolute Error (MAE) | 0.030275 |
 
-The model is evaluated using:
+---
 
-Metric	Description
-R² Score	Prediction accuracy
-MSE	Mean Squared Error
-MAE	Mean Absolute Error
-📈 Output & Analytics
+## 🛠️ Technologies Used
 
-The system automatically generates:
+| Technology | Purpose |
+|---|---|
+| Python | Core Development |
+| Pandas | Data Processing |
+| NumPy | Numerical Operations |
+| Scikit-Learn | Machine Learning |
+| Matplotlib | Data Visualization |
+| Google Gemini API | AI Chatbot Integration |
+| VS Code | Development Environment |
 
-File	Purpose
-metrics.txt	Model evaluation metrics
-battery_classification.csv	Predicted battery conditions
-pred_vs_actual.png	Visualization of predictions
-preprocessing_comparison.csv	Comparison of preprocessing methods
-🤖 AI Battery Assistant
+---
 
-The project integrates the Google Gemini API to provide an intelligent chatbot capable of answering battery-related questions.
+## 📂 Project Structure
 
-Example Queries
-“How can I improve battery lifespan?”
-“Why is battery recycling important?”
-“What causes lithium-ion batteries to degrade?”
-“How does temperature affect battery health?”
-📂 Project Structure
+```bash
 SOFE3370_LinearRegressionModel/
 │
 ├── results/
@@ -116,67 +91,127 @@ SOFE3370_LinearRegressionModel/
 ├── battery_chatbot.py
 ├── requirements.txt
 └── README.md
-▶️ Getting Started
-1️⃣ Clone the Repository
-git clone <repository-url>
-cd SOFE3370_LinearRegressionModel
-2️⃣ Create Virtual Environment
+```
+
+---
+
+## 📈 Outputs Generated
+
+The system automatically generates:
+
+- Battery health prediction reports
+- Classification CSV files
+- Performance metrics
+- Prediction visualizations
+- Preprocessing comparison results
+
+---
+
+## 🤖 AI Chatbot Integration
+
+The project integrates the **Google Gemini API** to provide an AI-powered battery assistant capable of answering questions such as:
+
+- “How can battery lifespan be improved?”
+- “Why is battery recycling important?”
+- “What causes lithium-ion battery degradation?”
+
+---
+
+## ▶️ Installation & Setup
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/battery-health-prediction.git
+cd battery-health-prediction
+```
+
+### 2️⃣ Create Virtual Environment
+
+```bash
 python -m venv venv
-3️⃣ Activate Environment
-Windows PowerShell
-.\venv\Scripts\Activate.ps1
-4️⃣ Install Dependencies
+```
+
+### 3️⃣ Activate Virtual Environment
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### Mac/Linux
+
+```bash
+source venv/bin/activate
+```
+
+### 4️⃣ Install Dependencies
+
+```bash
 pip install -r requirements.txt
-🧪 Running the Machine Learning Model
+```
+
+---
+
+## ▶️ Running the Project
+
+### Train Linear Regression Model
+
+```bash
 python train_linear_regression.py
+```
 
-The program will:
+### Compare Preprocessing Strategies
 
-Train the model
-Predict battery SOH
-Generate metrics
-Save reports and visualizations
-🔬 Running Preprocessing Comparisons
+```bash
 python train_linear_regression_preprocessing.py
+```
 
-This compares different preprocessing strategies to evaluate their impact on model performance.
+### Run Gemini AI Chatbot
 
-💬 Running the AI Chatbot
-Configure Gemini API Key
-$env:GEMINI_API_KEY="YOUR_API_KEY"
-Start Chatbot
+```bash
 python battery_chatbot.py
-📌 Example Results
-R² Score: 0.6561
-MSE: 0.001498
-MAE: 0.030275
+```
 
-The model successfully predicts battery SOH with relatively low prediction error.
+---
 
-🌱 Future Improvements
+## 🔑 Gemini API Setup
 
-Potential future enhancements include:
+1. Create an API key from Google AI Studio
+2. Set your environment variable:
 
-Deep Learning models
-Real-time battery monitoring
-Web dashboard deployment
-IoT integration
-Expanded battery datasets
-Advanced anomaly detection
-🎯 Key Takeaways
+### Windows PowerShell
 
-This project demonstrates:
+```powershell
+$env:GEMINI_API_KEY="YOUR_API_KEY"
+```
 
-Applied Machine Learning workflows
-Data preprocessing experimentation
-Predictive analytics
-AI API integration
-Automation of analytical outputs
-End-to-end Python development
-👨‍💻 Author
+### Mac/Linux
 
-Developed as part of advanced algorithm and Machine Learning exploration using Python and AI technologies.
+```bash
+export GEMINI_API_KEY="YOUR_API_KEY"
+```
 
-📄 License
+---
 
-This project is intended for educational, research, and portfolio purposes.
+## 📚 Future Improvements
+
+- Deep Learning Models
+- Real-time Battery Monitoring
+- Web Dashboard Integration
+- Mobile Application Support
+- IoT Sensor Connectivity
+- Advanced Battery Analytics
+
+---
+
+## 👨‍💻 Authors
+
+Developed as part of a Machine Learning and Software Engineering project focused on intelligent battery analytics and AI integration.
+
+---
+
+## 📄 License
+
+This project is for educational and research purposes.
